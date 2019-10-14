@@ -11,6 +11,9 @@ var waitingApp = new Vue({
     },
     formatLocalVisitDate(d) {
       return moment.utc(d).local().format("HH:mm MMM Do");
+    },
+    sinceLocalVisitDate(d) {
+      return moment.utc(d).local().fromNow();
     }
   },
   created() {
